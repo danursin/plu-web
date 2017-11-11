@@ -9,9 +9,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   
-  private pluData: PLUEntry[] = PLUData;
-  private searchItems: PLUEntry[] = [];
-  private form: FormGroup;
+  pluData: PLUEntry[] = PLUData;
+  searchItems: PLUEntry[] = [];
+  form: FormGroup;
 
   constructor(private fb: FormBuilder){}
 

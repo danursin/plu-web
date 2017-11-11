@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">PLU Codes</span>
+</nav>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <form novalidate [formGroup]="form">
+      <div class="form-group">
+        <label>Search for PLU</label>
+        <input type="text" class="form-control" placeholder="Start typing!" formControlName="value">
+      </div>
+    </form>
+
+    <p class="alert alert-info" *ngIf="!searchItems.length">
+      <i class="fa fa-exclamation-triangle"></i> 
+      No items with current search
+    </p>
+
+    <div class="list-group">
+      <div class="list-group-item" *ngFor="let item of searchItems">
+        <h4 class="text-primary">{{item.PLU}} - {{item.Commodity}}</h4>
+        <p>Category: {{item.Category}}</p>
+        <p>Variety: {{item.Variety}}</p>
+        <p>Botanical: {{item.Botanical}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

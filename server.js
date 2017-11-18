@@ -9,7 +9,7 @@ server.connection({
     routes: { cors: true }
 });
 
-server.route(Routes);
+server.route(Routes.routes);
 
 server.start( (err) => {
     if (err) {
